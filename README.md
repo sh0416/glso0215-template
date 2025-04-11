@@ -1,5 +1,7 @@
 # GLSO0215 Lab Template
 
+hi
+
 Author: Seonghyeon Lee
 
 This template is used for open-sourced programming course.
