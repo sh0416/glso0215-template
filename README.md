@@ -18,7 +18,7 @@ In our lab, we use docker and docker-compose to standardize our environment. So,
 After clone this repository, create an image with your personal information.
 
 ```
-docker-compose build --build-arg NAME=$NAME --build-arg EMAIL=$EMAIL
+docker-compose build --build-arg USER=$USER --build-arg EMAIL=$EMAIL
 ```
 
 > **Warning**
@@ -62,6 +62,7 @@ Check whether you can push your branch into `glso0215-lab` repository.
 
 ```
 git clone git@github.com:sh0416/glso0215-lab.git
+cd glso0215-lab
 git checkout -b ${USER}/master
 git push origin ${USER}/master
 ```
@@ -71,7 +72,7 @@ git push origin ${USER}/master
 After you finish the lab, stop and remove docker container.
 
 ```
-$ docker-compose down
+docker-compose down
 ```
 
 ## TODO
@@ -83,4 +84,3 @@ $ docker-compose down
 ## Contact
 
 If there is any issue, contact the instructor.
-
