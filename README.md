@@ -21,6 +21,14 @@ After clone this repository, create an image with your personal information.
 docker-compose build --build-arg USER=$USER --build-arg EMAIL=$EMAIL
 ```
 
+Copy the one-time code displayed in the shell and visit the provided URL to link your GitHub account.
+
+```
+=> [app 7/8] RUN gh auth login --web --skip-ssh-key -s admin:public_key &&     gh ssh-key add ~/.ssh/id_rsa.pub
+ => => # ! First copy your one-time code: AAAA-AAAA        
+ => => # Open this URL to continue in your web browser: https://github.com/login/device
+ ```
+
 > **Warning**
 > Do not upload this image to the internet. Your credential can be leaked.
 
@@ -50,12 +58,6 @@ git config list
 user.name=${USER}
 user.email=${EMAIL}
 core.pager=
-```
-
-Next, you can see the public key in the container. Add this public key into your Github account.
-
-```
-cat ~/.ssh/id_rsa.pub
 ```
 
 Check whether you can push your branch into `glso0215-lab` repository.

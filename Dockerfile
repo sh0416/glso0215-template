@@ -3,7 +3,7 @@ FROM node:22-alpine
 
 # Install Bash Shell
 RUN apk update && \
-    apk add --no-cache git git-lfs vim openssh openssh-keygen python3 shadow bash && \
+    apk add --no-cache git git-lfs vim openssh openssh-keygen python3 shadow bash github-cli && \
     chsh -s /bin/bash
 
 # Install terminalizer
@@ -27,6 +27,9 @@ RUN git config --global core.pager '' && \
     git config --global core.eol lf && \
     git config --global user.name ${USER} && \
     git config --global user.email ${EMAIL}
+
+RUN gh auth login --web --skip-ssh-key -s admin:public_key && \
+    gh ssh-key add ~/.ssh/id_rsa.pub
 
 # Set working directory
 WORKDIR /workspace
