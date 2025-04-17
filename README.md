@@ -18,7 +18,7 @@ In our lab, we use docker and docker-compose to standardize our environment. So,
 After clone this repository, create an image with your personal information.
 
 ```
-docker-compose build --build-arg NAME=$USER --build-arg EMAIL=$EMAIL
+docker-compose build --build-arg USER=$USER --build-arg EMAIL=$EMAIL
 ```
 
 > **Warning**
