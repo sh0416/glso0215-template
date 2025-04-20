@@ -2,6 +2,8 @@
 
 Author: Seonghyeon Lee
 
+Contributer: Hyeonje Jeong
+
 This template is used for open-sourced programming course.
 
 To do our lab, clone this repository first.
@@ -18,7 +20,7 @@ In our lab, we use docker and docker-compose to standardize our environment. So,
 After clone this repository, create an image with your personal information.
 
 ```
-docker-compose build --build-arg NAME=$NAME --build-arg EMAIL=$EMAIL
+docker-compose build --build-arg USER=$NAME --build-arg EMAIL=$EMAIL
 ```
 
 > **Warning**
@@ -62,6 +64,7 @@ Check whether you can push your branch into `glso0215-lab` repository.
 
 ```
 git clone git@github.com:sh0416/glso0215-lab.git
+cd glso0215-lab
 git checkout -b ${USER}/master
 git push origin ${USER}/master
 ```
